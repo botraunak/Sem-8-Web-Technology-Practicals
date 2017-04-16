@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stack Example</title>
+
+    <script>
+        var stack = new Array();
+
+        function displayStack(){
+            var show = document.getElementById('viewStack');
+            var str = "";
+            for (var i = stack.length - 1; i >= 0; i--) {
+                str += stack[i] + '<br/>';
+            }
+            viewStack.innerHTML = str;
+        }
+
+        function push(){
+            var num = document.stackform.element.value;
+            stack.push(num);
+            displayStack();
+            document.stackform.element.value = "";
+        }
+
+        function pop(){
+            stack.pop();
+            displayStack();
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Stack Example</h1>
+    <hr>
+    <h2 id="viewStack"></h2>
+    <form name="stackform">
+        <input type="number" name="element" placeholder="Number">
+        <input type="button" onclick="push()" value="Push Number">
+        <input type="button" onclick="pop()" value="Pop Element">
+    </form>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <script>
+        function validf()
+        {
+            var roll=document.stform.roll.value;
+            var name = document.stform.name.value;
+            var dob = document.stform.dob.value;
+
+            if(checkRoll(roll) && checkName(name) && checkDob(dob)){
+                alert("Data Saved Successfully");
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkRoll(roll){
+            if(roll.length == 7)
+            {
+                return true;
+            }
+            else
+            {
+                alert('Roll Number should be of 7 digits only');
+            }
+        }
+
+        function checkName(name){
+            if(name.match("^[a-zA-Z]+")){
+                return true;
+            }else{
+                alert("Name should be alphabetic only");
+                return false;
+            }
+        }
+
+        function checkDob(dob){
+            if(dob !== ""){
+                return true;
+            }else{
+                alert("DOB cannot be empty");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div>
+    <form name="stform" onsubmit="validf()">
+        <center>
+            <div>
+                <label>Roll Number</label><br>
+                <input type="number" name="roll" placeholder="Enter 7 digit Roll Number">
+                <br><br><br>
+            </div>
+            <div>
+                <label>Full Name</label><br>
+                <input type="text" name="name" placeholder="Enter your Full Name">
+                <br><br><br>
+            </div>
+            <div>
+                <label>Date of Birth</label><br>
+                <input type="text" name="dob" placeholder="Enter Your D.O.B.">
+                <br><br><br>
+            </div>
+            <!-- For success/fail messages -->
+            <input type="submit" value="Save Data">
+            <br>
+            <br>
+        </center>
+    </form>
+</div>
+
+</body>
+</html>

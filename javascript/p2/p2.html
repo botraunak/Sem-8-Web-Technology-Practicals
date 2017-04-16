@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Password Security</title>
+    <script>
+
+        function pass() {
+            var password;
+            var staticPassword="testpass";
+
+            password=(document.getElementById("pass").value);
+            
+            if (password==staticPassword)
+                alert("Password Correct!");
+            else
+               alert('Password Incorrect!');    
+       }
+
+   </script>
+</head>
+
+<body>
+    <center>	
+        <div>
+           <b>Enter Email:<b>    
+            <br> 
+            <input type="text" id="num" required>
+            <br><br>
+            <b>Enter Password:<b> 
+            <br>
+            <input type="password" id="pass" required>
+            <br><br>
+            <button onclick="pass()">
+                <a>Submit</a>
+            </button>
+        </div>
+    </center>
+</body>
+
+</html>

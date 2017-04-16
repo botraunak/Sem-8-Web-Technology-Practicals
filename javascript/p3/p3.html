@@ -1,0 +1,73 @@
+<html>
+<head>
+<style>
+    input {
+        display: block;
+        padding: 10px;
+        margin: 10px;
+    }
+    #dummyInput {
+        display: none;
+    }
+</style>
+
+<script type="text/javascript">
+
+function useLength(){
+    var length = document.bbsort.length.value;
+    var inputModel = document.getElementById('dummyInput');
+    var form = document.getElementById('numbers');
+
+    for (var i = 0; i < length; i++) {
+        var appendInput = inputModel.cloneNode();
+        appendInput.setAttribute('id','');
+        appendInput.setAttribute('placeholder','Number #'+(i+1));
+        form.append(appendInput);
+    }
+}
+
+function bbSort(){
+    var array = new Array();
+    var numbers = document.getElementById('numbers').children;
+    for (var i = 0; i < numbers.length; i++) {
+        var number = numbers[i].value;
+        if(number !== ""){
+            array.push(parseInt(number));
+        }
+    }
+
+    document.write("<h1>Array is "+ array + "</h1>");
+    var arrayLength = array.length;
+    var i,j,k;
+
+    for(i=0;i<arrayLength;i++)
+    {
+       for(j=i+1;j<arrayLength;j++)
+       {
+            if(array[i]<array[j])
+            {
+                k=array[i];
+                array[i]=array[j];
+                array[j]=k;
+            }
+        }
+    }
+    document.write("<br/><h2>After bubble sort in desending order " + array + "</h2>");
+}
+
+</script>
+
+</head>
+<body>
+
+<input type="number" id="dummyInput">
+<form id="form" name="bbsort" onsubmit= " bbSort(); return true;">
+    <input type="number" name="length" placeholder="length">
+    <input type="button" onclick="useLength()" value="Use Length">
+    <div id="numbers">
+        
+    </div>
+    <input type="submit" value="Bubble Sort">
+</form>
+</body>
+</html>
