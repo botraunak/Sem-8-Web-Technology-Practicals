@@ -1,3 +1,7 @@
+/*
+*	1. Implement a Matrix class. Use methods for addition, subtraction, multiplication and transpose. Use `toString()` to display the matrix
+*/
+
 import java.util.Scanner;
 class Matrix{
 	int[][] matrix;
