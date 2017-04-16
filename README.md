@@ -24,6 +24,14 @@ Listed below are the Java practical that are part of the course. To run you shou
 3. Implement an `abstract` Class Stack with methods push, pop, display for two classes: `StaticStack` and `DynamicStack`. StaticStack uses one dimensional integer array to store numbers and DynamicStack uses an integer `ArrayList` to store.
 4. Create a base class called `Shape`. It should containt 2 methods `getcoord()` and `showcorrd()` to accept X and Y coordinates and to display the same respectively. Create a subclass called Rect. it should also contain a method to display the length and breadth of the rectangle called `showCorrd()`. In main method, execute `showCorrd()` method of Rect class by applying the dynamic method dispatch concept.    
 
+## JSP
+Listed below are the JSP programs in the course. To run you'd need a server.
+1. Write a JSP Scriptlet to print the current time and date.
+2. Write a JSP scriplet to declare two integers and print their sum, difference, product and modulus.
+3. Write a JSP scriptlet which inputs name of three friends from a form and prints them back with a prefix "Hello" before each name.
+4. Write a JSP Scriptlet to input a number from a form and prints back the factorial
+5. Write a JSP program which uses JSTL and Expression Language the greates of three.
+
 ## JDBC
 To Run JDBC codes I have included the mysql connector which would be required to run JDBC codes. Also You'll find the sql file required to create the neccessary database for the program
 - Compile: `javac JDBCDemo.java`
