@@ -45,3 +45,9 @@ Below are the listed programs in course.
     - e. Find subject wise toppers.
     - f. Find average marks.
     - g. Find the student getting second highest marks.
+
+## AJAX
+Below are the ajax practicals in course. to run them you'd need to run the html files on a server. APACHE etc.
+1. Create an interactive multiple-choice quiz using JavaScript and AJAX.
+2. Create an Ajax-enabled HTML page for accepting a user ID and password from the user and check if user ID and password are correct.
+

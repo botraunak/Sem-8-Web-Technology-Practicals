@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Enabled user and password checker</title>
+    <script>
+        function handleLogin() {
+            var userid = document.login.userid.value;
+            var pass = document.login.password.value;
+
+            var xhttp;
+            document.getElementById("loading").innerHTML =  "Sending Request To Server... ";   
+            if (window.XMLHttpRequest) {
+                // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+                // code for old IE browsers
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var res = JSON.parse(xhttp.responseText);
+                    if (res.userid == userid && res.password == pass){
+                        // Typical action to be performed when the document is ready:
+                        setTimeout(function(){
+                            document.getElementById("demo").innerHTML = "Login SuccessFul"; 
+                            document.getElementById("loading").innerHTML =  ""; 
+                        },1000);
+                    }
+                    else{
+                        setTimeout(function(){
+                            document.getElementById("demo").innerHTML = "Login UnsuccessFul!"; 
+                            document.getElementById("loading").innerHTML =  ""; 
+                        },1000);
+                    }
+                }
+            };
+            xhttp.open("GET", "creds.json", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body> 
+    <h1 id="demo"></h1>
+    <form name="login" onsubmit="event.preventDefault(); handleLogin();">
+        <input type="text" name="userid" placeholder="userid">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Login">
+    </form>
+    <h1 id="loading"></h1>
+</body>
+</html>
