@@ -23,3 +23,17 @@ Listed below are the Java practical that are part of the course. To run you shou
     - b. Complex performs arithmetic for complex numbers. Use instance variables: real and imaginary for storing complex numbers. Simulate addition, subtraction, multiplication of complex numbers. Introduce `this` keyword.
 3. Implement an `abstract` Class Stack with methods push, pop, display for two classes: `StaticStack` and `DynamicStack`. StaticStack uses one dimensional integer array to store numbers and DynamicStack uses an integer `ArrayList` to store.
 4. Create a base class called `Shape`. It should containt 2 methods `getcoord()` and `showcorrd()` to accept X and Y coordinates and to display the same respectively. Create a subclass called Rect. it should also contain a method to display the length and breadth of the rectangle called `showCorrd()`. In main method, execute `showCorrd()` method of Rect class by applying the dynamic method dispatch concept.    
+
+## JDBC
+To Run JDBC codes I have included the mysql connector which would be required to run JDBC codes. Also You'll find the sql file required to create the neccessary database for the program
+- Compile: `javac JDBCDemo.java`
+- Run: `java -cp mysql-connector-java-5.1.25.jar:. JDBCDemo`
+Below are the listed programs in course.
+1. Create Student and Results Database and perform the following using JDBC programs
+    - a. Find total number of students
+    - b. Print average marks for each subject
+    - c. Find the name of student getting highest marks
+    - d. Find no of students getting first, second and third division
+    - e. Find subject wise toppers.
+    - f. Find average marks.
+    - g. Find the student getting second highest marks.
