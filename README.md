@@ -6,7 +6,7 @@ College Semester 8 Web Technology Practicals, University of Delhi
 The practical list contains programs of JavaScript, Java, JSP, JDBC and AJAX.
 
 ## Java
-Listed below are the Java practical that are part of the course. To run you should simply run `javac` and then run the program.
+Listed below are the Java practical that are part of the course. To run you should simply run `javac` and then run the program. To run the second program with `Arithmetic` package make sure you're in the p2/ directory after compiling the class using javac then run `java Arithmetic.ArithmeticDemo`
 1. Implement a Matrix class. Use methods for addition, subtraction, multiplication and transpose. Use `toString()` to display the matrix
 2. Create a `package` 'Arithmetic' containing two classes `Rational` and `Complex`.
     a. Rational performs arithmetic with rational nos. Use integer variables to represent the private instance variables of the class, numerator and denominator. Write a constructor method that enables an object of this class. Use `toString()` method.
