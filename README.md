@@ -5,6 +5,16 @@ College Semester 8 Web Technology Practicals, University of Delhi
 
 The practical list contains programs of JavaScript, Java, JSP, JDBC and AJAX.
 
+## JavaScript
+Listed below are the javascript practicals of the course. to run simply open the files in the browser.
+1. Create a student registration form. Create functions to perform to following checks:
+    - a. Roll number is a 7 digit numeric value
+    - b. Name should be an alphabetical value
+    - c. Non-empty fields like DOB.
+2. Implement a Static password protection
+3. Write a javascript to sort an array using bubble sort take the number of elements and array from user.
+4. Write a JS to implement stack methods (push and pop).
+
 ## Java
 Listed below are the Java practical that are part of the course. To run you should simply run `javac` and then run the program. To run the second program with `Arithmetic` package make sure you're in the p2/ directory after compiling the class using javac then run `java Arithmetic.ArithmeticDemo`
 1. Implement a Matrix class. Use methods for addition, subtraction, multiplication and transpose. Use `toString()` to display the matrix
